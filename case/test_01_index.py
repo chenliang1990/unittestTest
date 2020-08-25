@@ -8,6 +8,7 @@ class TestCaseIndex(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver = webdriver.Chrome(executable_path='driver/chromedriver.exe')
+        cls.driver.maximize_window()
     @classmethod
     def tearDownClass(cls):
         cls.driver.quit() 
@@ -16,7 +17,7 @@ class TestCaseIndex(unittest.TestCase):
         time.sleep(3)
     def tearDown(self):
         print("这是teardown")
-    #方法test_数字_用例名称
+    #方法test_数字_用例名称  推荐教程
     def test_01_tjjc(self):        
         e = self.driver.find_element_by_xpath('//*[@id="articles"]/li[2]/div/div[1]')
         assert e.text == '为什么要学习测试' #python原生自带的断言
