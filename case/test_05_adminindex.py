@@ -1,5 +1,3 @@
-
-
 import unittest, time
 from selenium import webdriver
 from utils.seleniumtools import is_logined
